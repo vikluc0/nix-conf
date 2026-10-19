@@ -40,8 +40,6 @@
             email = "viklucdaal@gmail.com";
           };
         };
-##        extraConfig = {
-##        };
       };
 
       ## how to push changes
