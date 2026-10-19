@@ -2,7 +2,7 @@
 
 let
   sddmWallpaperName = "mountain.png";
-  wallpaperFile = ../wallpapers + "/${sddmWallpaperName}";
+  sddmWallpaperFile = ../wallpapers + "/${sddmWallpaperName}";
 
   sddm-astronaut = (pkgs.sddm-astronaut.override {
     embeddedTheme = "astronaut";  
@@ -13,7 +13,7 @@ let
   }).overrideAttrs (oldAttrs: {
     installPhase = oldAttrs.installPhase + ''
       chmod u+w $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
-      cp ${wallpaperFile} $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/${wallpaperName}
+      cp ${sddmWallpaperFile} $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/${sddmWallpaperName}
     '';
   });
 in
