@@ -1,0 +1,71 @@
+{
+  description = "Nixos flake";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    home-manager = {
+        url = "github:nix-community/home-manager/release-26.05";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+    nixos-splash-plasma6 = {
+      url = "github:nimrodium/nixos-splash-plasma6";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    lazyvim-nix.url = "github:pfassina/lazyvim-nix";
+  };
+     
+  outputs = { 
+    self,
+    nixpkgs,
+    nixpkgs-unstable,
+    home-manager,
+    plasma-manager,
+    lazyvim-nix,
+    nix-flatpak,
+    nixos-splash-plasma6,
+    ...
+  }: {
+    nixosConfigurations.VirusPC = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = {
+        inherit nixos-splash-plasma6;
+        pkgs-unstable = import nixpkgs-unstable {
+          system = "x86_64-linux";
+          config.allowUnfree = true;
+        };
+      };
+      modules = [
+        ./configuration.nix
+        nix-flatpak.nixosModules.nix-flatpak
+        home-manager.nixosModules.home-manager
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.vikluc0 = {
+              imports = [
+	        ./home.nix
+		plasma-manager.homeModules.plasma-manager
+	      ];
+            };
+            backupFileExtension = "hm-backup";
+            extraSpecialArgs = { 
+              inherit lazyvim-nix;
+	      inherit nixos-splash-plasma6;
+    	      pkgs-unstable = import nixpkgs-unstable {
+                system = "x86_64-linux";
+                config.allowUnfree = true;
+	      };
+            };
+          };
+        }		
+      ];
+    };
+  };	
+}
