@@ -38,10 +38,10 @@
             email = "viklucdaal@gmail.com";
           };
         };
-	extraConfig = {
+        extraConfig = {
           init.defaultBranch = "main";
-	  safe.directory = "/etc/nixos";
-	};
+          safe.directory = "/etc/nixos";
+        };
       };
 
       ## how to push changes
