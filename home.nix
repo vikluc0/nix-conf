@@ -33,15 +33,15 @@
       git = {
         enable = true;
         settings = {
+          init.defaultBranch = "main";
+          safe.directory = "/etc/nixos";
           user = {
             name = "vikluc0";
             email = "viklucdaal@gmail.com";
           };
         };
-        extraConfig = {
-          init.defaultBranch = "main";
-          safe.directory = "/etc/nixos";
-        };
+##        extraConfig = {
+##        };
       };
 
       ## how to push changes
