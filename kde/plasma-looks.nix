@@ -3,7 +3,7 @@
 {
   programs.plasma = {
     workspace = {
-      wallpaper = /home/vikluc0/Pictures/Wallpapers/ddg_1776280415303827002.jpg;
+      wallpaper = /etc/nixos/wallpapers/blackhole.png;
       lookAndFeel = "org.kde.breezedark.desktop";
       cursor = {
         theme = "Breeze-Dark";
@@ -14,8 +14,8 @@
       
       kscreenlockerrc = { 
         "Greeter/Wallpaper/org.kde.image/General" = { 
-         Image = "file:///home/vikluc0/Pictures/Wallpapers/ddg_1776373765829978071.jpg";
-          PreviewImage = "file:///home/vikluc0/Pictures/Wallpapers/ddg_1776373765829978071.jpg";
+         Image = "file:///etc/nixos/wallpapers/cat.png";
+          PreviewImage = "file:///etc/nixos/wallpapers/cat.png";
         };
       };
   

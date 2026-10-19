@@ -1,14 +1,14 @@
 {pkgs, pkgs-unstable, nixos-splash-plasma6, ... }:
 
 let
-  wallpaperName = "ddg_1774716902087709339.jpg";
-  wallpaperFile = ../sddm_background + "/${wallpaperName}";
+  sddmWallpaperName = "mountain.png";
+  wallpaperFile = ../wallpapers + "/${sddmWallpaperName}";
 
   sddm-astronaut = (pkgs.sddm-astronaut.override {
     embeddedTheme = "astronaut";  
     themeConfig = {
       HeaderTextColor = "#FF0000";
-      Background = "Backgrounds/${wallpaperName}";
+      Background = "Backgrounds/${sddmWallpaperName}";
     };
   }).overrideAttrs (oldAttrs: {
     installPhase = oldAttrs.installPhase + ''
