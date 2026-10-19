@@ -72,6 +72,7 @@ in
     obs-studio
     btop
     git
+    gitkraken
   ] ++ (with pkgs-unstable; [
     croc  
   ]);
