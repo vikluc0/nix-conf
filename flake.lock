@@ -57,7 +57,7 @@
         "type": "github"
       }
     },
-    "lazyvim-nix": {
+    "lazyvim": {
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs"
@@ -186,7 +186,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "lazyvim-nix": "lazyvim-nix",
+        "lazyvim": "lazyvim",
         "nix-flatpak": "nix-flatpak",
         "nixos-splash-plasma6": "nixos-splash-plasma6",
         "nixpkgs": "nixpkgs_2",
