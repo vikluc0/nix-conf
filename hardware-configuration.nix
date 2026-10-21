@@ -33,7 +33,7 @@
     [ { device = "/dev/disk/by-uuid/4186ad21-17ae-4307-9724-34f50ff88de5"; }
     ];
 
-    fileSystems."/backup" = 
+    fileSystems."/storage" = 
     {  device = "/dev/disk/by-uuid/a39242f8-89ad-4245-b925-8bbe70e81253";
       fsType = "ext4";
       options = [ "nofail" ];
