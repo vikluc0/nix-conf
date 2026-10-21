@@ -19,6 +19,7 @@
       "p10k.zsh".source = ./dotfiles/.p10k.zsh;
       "fastfetch".source = ./dotfiles/fastfetch;
       "yazi".source = ./dotfiles/yazi;
+      "nvim".source = ./dotfiles/nvim;
     };
 
     home.activation.removeOldHmBackups =
