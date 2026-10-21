@@ -17,7 +17,7 @@
       url = "github:nimrodium/nixos-splash-plasma6";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lazyvim-nix.url = "github:pfassina/lazyvim-nix";
+    lazyvim.url = "github:pfassina/lazyvim-nix";
   };
      
   outputs = { 
@@ -26,7 +26,7 @@
     nixpkgs-unstable,
     home-manager,
     plasma-manager,
-    lazyvim-nix,
+    lazyvim,
     nix-flatpak,
     nixos-splash-plasma6,
     ...
@@ -56,7 +56,7 @@
             };
             backupFileExtension = "hm-backup";
             extraSpecialArgs = { 
-              inherit lazyvim-nix;
+              inherit lazyvim;
 	      inherit nixos-splash-plasma6;
     	      pkgs-unstable = import nixpkgs-unstable {
                 system = "x86_64-linux";

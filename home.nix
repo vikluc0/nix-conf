@@ -1,9 +1,9 @@
- {config, pkgs, lazyvim-nix, lib, ... }:
+ {config, pkgs, lazyvim, lib, ... }:
  
 
  {
     imports = [ 
-      lazyvim-nix.homeManagerModules.default
+      lazyvim.homeManagerModules.default
       ./kde/kde.nix
     ];
     programs.lazyvim.enable = true;
