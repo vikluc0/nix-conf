@@ -7,7 +7,8 @@
     shell = pkgs.zsh;
     extraGroups = [ 
       "networkmanager"
-      "wheel"  
+      "wheel"
+      "dialout"
     ]; 
     packages = with pkgs; [
        
