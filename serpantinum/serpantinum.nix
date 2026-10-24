@@ -6,7 +6,7 @@
     systemd.enable = true;
 
     settings = {
-      wallpaperDir = "/home/username/Pictures/Wallpapers";
+      wallpaperDir = "/home/vikluc0/Pictures/Wallpapers";
 
       general = {
         language = "en";
