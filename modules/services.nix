@@ -24,6 +24,7 @@
       };
     };
 
+    desktopManager.plasma6.enable = true;
     displayManager = {
       sddm = {
         enable = true;
@@ -42,7 +43,6 @@
         };
         preStart = "sleep 3";
       };
-      plasma6.enable = true;
     };
 
     gvfs.enable = true;
