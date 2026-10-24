@@ -44,7 +44,6 @@
         ./configuration.nix
         nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
-        serpantinum.nixosModules.default
         {
           home-manager = {
             useGlobalPkgs = true;
