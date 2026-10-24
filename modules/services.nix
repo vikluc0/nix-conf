@@ -23,23 +23,26 @@
 	      variant = "";
       };
     };
-  
-    desktopManager.plasma6.enable = true;
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-      extraPackages = with pkgs; [
-        sddm-astronaut
-      	kdePackages.qtmultimedia
-      	kdePackages.qtsvg
-      	kdePackages.ksvg
-      ];
-      theme = "sddm-astronaut-theme";
-      settings = {
-        X11= {
-          XkbLayout = "us";
-	      };
+
+    displayManager = {
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+        extraPackages = with pkgs; [
+          sddm-astronaut
+        	kdePackages.qtmultimedia
+        	kdePackages.qtsvg
+        	kdePackages.ksvg
+        ];
+        theme = "sddm-astronaut-theme";
+        settings = {
+          X11= {
+            XkbLayout = "us";
+  	      };
+        };
+        preStart = "sleep 3";
       };
+      plasma6.enable = true;
     };
 
     gvfs.enable = true;
