@@ -1,10 +1,12 @@
- {config, pkgs, lazyvim, lib, ... }:
+ {config, pkgs, lazyvim, lib, serpantinum, ... }:
  
 
  {
     imports = [ 
       lazyvim.homeManagerModules.default
       ./kde/kde.nix
+      serpantinum.homeManagerModules.default
+      ./serpantinum/serpantinum.nix
     ];
     programs.lazyvim.enable = true;
     home.username = "vikluc0";
