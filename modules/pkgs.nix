@@ -72,6 +72,9 @@ in
     obs-studio
     btop
     git
+    gnome-keyring
+    hyprland
+    quikshell
   ] ++ (with pkgs-unstable; [
     croc  
   ]);

@@ -41,7 +41,6 @@
             XkbLayout = "us";
   	      };
         };
-        preStart = "sleep 3";
       };
     };
 
@@ -89,7 +88,7 @@
     };
     hardware.openrgb.enable = true;
     tailscale.enable = true;
-
+    gnome.gnome-keyring.enable
   };
 
   networking = {
@@ -108,6 +107,7 @@
   security = {
     polkit.enable = true;
     rtkit.enable = true;
+    pam.services.gnome-keyring.enable = true ;
   };
 
 }
