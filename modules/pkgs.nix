@@ -74,7 +74,7 @@ in
     git
     gnome-keyring
     hyprland
-    quikshell
+    quickshell
   ] ++ (with pkgs-unstable; [
     croc  
   ]);
