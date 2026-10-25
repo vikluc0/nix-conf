@@ -22,6 +22,8 @@ hl.config({
       enabled = false,
     },
   },
+  
+  layout = dwindle
 
   input = {
     kb_layout = "us",
