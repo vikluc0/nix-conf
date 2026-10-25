@@ -88,7 +88,7 @@
     };
     hardware.openrgb.enable = true;
     tailscale.enable = true;
-    gnome.gnome-keyring.enable
+    gnome.gnome-keyring.enable = true;
   };
 
   networking = {
