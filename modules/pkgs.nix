@@ -30,6 +30,11 @@ in
     zsh.enable = true;
     yazi.enable = true;
     localsend.enable = true;
+    hyprland = {
+      enable = true;
+      withUWSM = true;
+      xwayland.enable = true;
+    };
   };
   
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -73,7 +78,6 @@ in
     btop
     git
     gnome-keyring
-    hyprland
     quickshell
   ] ++ (with pkgs-unstable; [
     croc  
