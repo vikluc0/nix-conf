@@ -79,6 +79,8 @@ in
     git
     gnome-keyring
     quickshell
+    spotify
+    lavat
   ] ++ (with pkgs-unstable; [
     croc  
   ]);
