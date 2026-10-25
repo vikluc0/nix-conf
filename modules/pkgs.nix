@@ -33,8 +33,8 @@ in
     hyprland = {
       enable = true;
       xwayland.enable = true;
-      package = pkgs-unstable.hyprland;
     };
+    serpantinum.enable = true;
   };
   
   # You can use https://search.nixos.org/ to find more packages (and options).

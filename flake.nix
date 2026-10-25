@@ -18,6 +18,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     lazyvim.url = "github:pfassina/lazyvim-nix";
+    serpantinum.url = "github:ilyamiro/serpantinum";
   };
      
   outputs = { 
@@ -29,12 +30,14 @@
     lazyvim,
     nix-flatpak,
     nixos-splash-plasma6,
+    serpantinum,
     ...
   }: {
     nixosConfigurations.VirusPC = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = {
         inherit nixos-splash-plasma6;
+        inherit serpantinum
         pkgs-unstable = import nixpkgs-unstable {
           system = "x86_64-linux";
           config.allowUnfree = true;
@@ -44,6 +47,7 @@
         ./configuration.nix
         nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
+        serpantinum.nixosModules.default
         {
           home-manager = {
             useGlobalPkgs = true;
