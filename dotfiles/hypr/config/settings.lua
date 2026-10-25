@@ -29,8 +29,6 @@ hl.config({
     },
   },
   
-  layout = dwindle
-
   input = {
     kb_layout = "us",
     kb_options = "grp:alt_shift_toggle",
