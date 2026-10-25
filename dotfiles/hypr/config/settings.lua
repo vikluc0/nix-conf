@@ -6,7 +6,13 @@ hl.config({
     float_gaps = 6,
     resize_on_border = true,
     extend_border_grab_area = 30,
+    layout = "dwindle",
   },
+
+  dwindle = {
+    preserve_split = true,
+  },
+
 
   decoration = {
     rounding = 12,
