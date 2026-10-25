@@ -33,6 +33,7 @@ in
     hyprland = {
       enable = true;
       xwayland.enable = true;
+      package = pkgs-unstable.hyprland;
     };
   };
   
