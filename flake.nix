@@ -37,7 +37,7 @@
       system = "x86_64-linux";
       specialArgs = {
         inherit nixos-splash-plasma6;
-        inherit serpantinum
+        inherit serpantinum;
         pkgs-unstable = import nixpkgs-unstable {
           system = "x86_64-linux";
           config.allowUnfree = true;
