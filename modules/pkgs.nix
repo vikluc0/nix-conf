@@ -81,8 +81,10 @@ in
     quickshell
     spotify
     lavat
+    ffmpeg
   ] ++ (with pkgs-unstable; [
-    croc  
+    croc
+    superfile
   ]);
 
   services.flatpak.packages = [
