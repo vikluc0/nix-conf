@@ -83,7 +83,15 @@ in
     ffmpeg
   ] ++ (with pkgs-unstable; [
     croc
-    superfile
+    (superfile.overrideAttrs (oldAttrs: {
+      postInstall = (oldAttrs.postInstall or "") + ''
+        mv $out/bin/superfile $out/bin/spf
+      '';
+
+      meta = oldAttrs.meta // {
+        mainProgram = "spf";
+      };
+    }))
   ]);
 
   services.flatpak.packages = [
