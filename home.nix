@@ -33,6 +33,7 @@
     lazyvim.enable = true;
     serpantinum = {
       enable = true;
+      systemd.enable = false;
     };
     git = {
       enable = true;
