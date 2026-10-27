@@ -33,7 +33,6 @@
     lazyvim.enable = true;
     serpantinum = {
       enable = true;
-      systemd.enable = true;
     };
     git = {
       enable = true;
@@ -74,7 +73,6 @@
         eza = "eza --color=auto -a --icons=always --group-directories-first";
         ezal = "eza --color=auto -lah --icons=always --git";
         ezat = "eza --color=auto --tree --level=2 --icons=always";
-        spf = "superfile";
       };
  
       

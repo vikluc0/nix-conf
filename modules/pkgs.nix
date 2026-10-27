@@ -34,7 +34,6 @@ in
       enable = true;
       xwayland.enable = true;
     };
-    serpantinum.enable = true;
   };
   
   # You can use https://search.nixos.org/ to find more packages (and options).
