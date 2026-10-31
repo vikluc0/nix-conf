@@ -20,6 +20,7 @@
     "fastfetch".source = ./dotfiles/fastfetch;
     "yazi".source = ./dotfiles/yazi;
     "hypr".source = ./dotfiles/hypr;
+    "superfile".source = ./dotfiles/superfile;
   };
 
   home.activation.removeOldHmBackups =
