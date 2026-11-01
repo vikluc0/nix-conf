@@ -95,7 +95,7 @@ in
     }))
     (pkgs.symlinkJoin {
       name = "orca-slicer";
-      paths = [ pkgs.orca-slicer ];
+      paths = [ pkgs-unstable.orca-slicer ];
       buildInputs = [ pkgs.makeWrapper ];
 
       postBuild = ''
