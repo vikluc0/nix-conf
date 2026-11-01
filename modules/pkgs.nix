@@ -81,6 +81,7 @@ in
     spotify
     lavat
     ffmpeg
+    plasticity
   ] ++ (with pkgs-unstable; [
     croc
     (superfile.overrideAttrs (oldAttrs: {
@@ -92,6 +93,7 @@ in
         mainProgram = "spf";
       };
     }))
+    orca-slicer
   ]);
 
   services.flatpak.packages = [
