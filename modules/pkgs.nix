@@ -101,7 +101,8 @@ in
       postBuild = ''
         wrapProgram $out/bin/orca-slicer \
           --set WEBKIT_DISABLE_DMABUF_RENDERER 1 \
-          --set GDK_BACKEND x11
+          --set GDK_BACKEND x11\
+          --set GTK_THEME Adwaita:dark \
       '';
     })
   ]);
