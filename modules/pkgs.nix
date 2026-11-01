@@ -93,7 +93,17 @@ in
         mainProgram = "spf";
       };
     }))
-    orca-slicer
+    (pkgs.symlinkJoin {
+      name = "orca-slicer";
+      paths = [ pkgs.orca-slicer ];
+      buildInputs = [ pkgs.makeWrapper ];
+
+      postBuild = ''
+        wrapProgram $out/bin/orca-slicer \
+          --set WEBKIT_DISABLE_DMABUF_RENDERER 1 \
+          --set GDK_BACKEND x11
+      '';
+    })
   ]);
 
   services.flatpak.packages = [
