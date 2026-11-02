@@ -47,7 +47,6 @@ in
     fastfetch
     fzf
     mangohud
-    motrix
     vlc
     yt-dlp
     peazip
@@ -83,7 +82,6 @@ in
     ffmpeg
     plasticity
   ] ++ (with pkgs-unstable; [
-    croc
     (superfile.overrideAttrs (oldAttrs: {
       postInstall = (oldAttrs.postInstall or "") + ''
         mv $out/bin/superfile $out/bin/spf
@@ -105,6 +103,8 @@ in
           --set GTK_THEME Adwaita:dark \
       '';
     })
+    motrix
+    croc
   ]);
 
   services.flatpak.packages = [
