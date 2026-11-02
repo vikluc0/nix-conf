@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
       ./modules/pkgs.nix
       ./modules/boot.nix
-      ./modules/nvidia.nix
+      ./modules/gpu.nix
       ./modules/services.nix
       ./modules/nix.nix
       ./modules/system.nix
