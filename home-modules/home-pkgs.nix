@@ -55,7 +55,6 @@
         ezat = "eza --color=auto --tree --level=2 --icons=always";
       };
  
-      
       initContent = ''
  
         source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
