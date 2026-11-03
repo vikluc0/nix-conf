@@ -1,7 +1,10 @@
+
 {
   description = "Nixos flake";
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+  inputs = let
+    version = "26.05";
+  in{
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-${version}";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     home-manager = {
