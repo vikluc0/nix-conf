@@ -1,10 +1,7 @@
-
 {
   description = "Nixos flake";
-  inputs = let
-    version = "26.05";
-  in{
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-${version}";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     home-manager = {
@@ -23,8 +20,8 @@
     lazyvim.url = "github:pfassina/lazyvim-nix";
     serpantinum.url = "github:ilyamiro/serpantinum";
   };
-     
-  outputs = { 
+
+  outputs = {
     self,
     nixpkgs,
     nixpkgs-unstable,
