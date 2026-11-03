@@ -1,10 +1,8 @@
-{config, pkgs, lazyvim, lib, serpantinum, ... }:
+{config, lib, ... }:
 
 
 {
-  imports = [ 
-    lazyvim.homeManagerModules.default
-    serpantinum.homeManagerModules.default
+  imports = [
     ./kde/kde.nix
     ./home-modules/home-pkgs.nix
   ];

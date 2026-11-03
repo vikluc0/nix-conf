@@ -1,6 +1,11 @@
 { pkgs, pkgs-unstable, lazyvim, serpantinum, ... }:
 
 {
+  imports = [ 
+    lazyvim.homeManagerModules.default
+    serpantinum.homeManagerModules.default  
+  ];
+
   programs = {
     fzf.enable = true;
     zoxide.enable = true;
