@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 {
-  
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
@@ -9,6 +8,11 @@
       Genaral = {
         Discoverable = true;
         Pairable = true;
+        FastConnectable = true;
+        Experimental = true;
+      };
+      Policy = {
+        AutoEnable = true;
       };
     };
   };
@@ -51,16 +55,6 @@
       drivers = [ pkgs.hplip ]; 
     };
     blueman.enable = true;
-
-##    restic.backups.nixos-config = {
-##     initialize = true;
-##     repository = "/backup/nixos-config-repo"; 
-##     paths = [ "/etc/nixos" ]; 
-##     timerConfig = {
-##       OnCalendar = "daily";
-##       Persistent = true;
-##     };
-##    };
 
     pipewire = {
       enable = true;
