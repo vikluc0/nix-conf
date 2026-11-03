@@ -1,4 +1,4 @@
-{config, lib, ... }:
+{config, lib, pkgs-unstable, lazyvim, serpantinum, ... }:
 
 
 {
