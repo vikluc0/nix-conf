@@ -81,6 +81,7 @@ in
     lavat
     ffmpeg
     plasticity
+    notesnook
   ] ++ (with pkgs-unstable; [
     (superfile.overrideAttrs (oldAttrs: {
       postInstall = (oldAttrs.postInstall or "") + ''
