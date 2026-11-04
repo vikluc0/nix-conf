@@ -9,6 +9,7 @@
       "networkmanager"
       "wheel"
       "dialout"
+      "nordvpn"
     ];
     packages = with pkgs; [
       

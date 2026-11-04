@@ -176,6 +176,26 @@
         "type": "github"
       }
     },
+    "nordvpn": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792686746,
+        "narHash": "sha256-QCX21kgud2Lc2HOITnm8c0BdFKplTL9nGLZJCiReXMU=",
+        "ref": "refs/heads/main",
+        "rev": "a9f47a24ad6973888e4ad55d0f5fdfda83bdaaca",
+        "revCount": 53,
+        "type": "git",
+        "url": "https://codeberg.org/marcodemayda/nordvpn-nix"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/marcodemayda/nordvpn-nix"
+      }
+    },
     "plasma-manager": {
       "inputs": {
         "home-manager": [
@@ -207,6 +227,7 @@
         "nixos-splash-plasma6": "nixos-splash-plasma6",
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "nordvpn": "nordvpn",
         "plasma-manager": "plasma-manager",
         "serpantinum": "serpantinum"
       }
