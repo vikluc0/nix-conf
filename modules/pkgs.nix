@@ -28,7 +28,6 @@ in
     steam.gamescopeSession.enable = true;
     gamemode.enable = true;
     zsh.enable = true;
-    yazi.enable = true;
     localsend.enable = true;
     hyprland = {
       enable = true;

@@ -69,7 +69,6 @@
               inherit lazyvim;
 	            inherit nixos-splash-plasma6;
               inherit serpantinum;
-              inherit nordvpn;
     	        pkgs-unstable = import nixpkgs-unstable {
                 system = "x86_64-linux";
                 config.allowUnfree = true;
