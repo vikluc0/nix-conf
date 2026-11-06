@@ -8,6 +8,7 @@
     ./plasma-effects.nix
     ./plasma-apps.nix
     ./plasma-settings.nix
+    ./plasma-autostart.nix
   ];
 
   programs.plasma = {
