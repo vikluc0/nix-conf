@@ -121,7 +121,6 @@
         "Applications/waydroid.com.android.vending".Seen = true;
       };
   
-              
       spectaclerc = {
         ImageSave = {
          lastImageSaveLocation = "file:///home/vikluc0/Pictures/Screenshots/Screenshot_20261011_143430.png";
