@@ -14,6 +14,7 @@
       ./modules/users.nix
       ./modules/env.nix
       ./modules/virt.nix
+      ./modules/autostart.nix
     ];
 
   system.stateVersion = "26.05"; 

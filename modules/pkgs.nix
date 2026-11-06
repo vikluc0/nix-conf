@@ -20,7 +20,7 @@ in
 
 {
 
- nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   programs = {
     firefox.enable = true;
