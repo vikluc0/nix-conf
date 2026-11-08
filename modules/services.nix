@@ -1,18 +1,20 @@
 { pkgs, nordvpn, ... }:
 
 {
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-    settings = {
-      Genaral = {
-        Discoverable = true;
-        Pairable = true;
-        FastConnectable = true;
-        Experimental = true;
-      };
-      Policy = {
-        AutoEnable = true;
+  hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+      settings = {
+        Genaral = {
+          Discoverable = true;
+          Pairable = true;
+          FastConnectable = true;
+          Experimental = true;
+        };
+        Policy = {
+          AutoEnable = true;
+        };
       };
     };
   };

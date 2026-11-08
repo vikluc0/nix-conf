@@ -81,6 +81,7 @@ in
     ffmpeg
     plasticity
     notesnook
+    brightnessctl
   ] ++ (with pkgs-unstable; [
     (superfile.overrideAttrs (oldAttrs: {
       postInstall = (oldAttrs.postInstall or "") + ''
