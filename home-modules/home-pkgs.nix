@@ -53,6 +53,7 @@
         eza = "eza --color=auto -a --icons=always --group-directories-first";
         ezal = "eza --color=auto -lah --icons=always --git";
         ezat = "eza --color=auto --tree --level=2 --icons=always";
+        btop = "LD_LIBRARY_PATH=/run/opengl-driver/lib btop";
       };
  
       initContent = ''
