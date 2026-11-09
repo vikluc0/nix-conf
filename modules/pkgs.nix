@@ -82,6 +82,7 @@ in
     plasticity
     notesnook
     chromium
+    szyszka
   ] ++ (with pkgs-unstable; [
     (superfile.overrideAttrs (oldAttrs: {
       postInstall = (oldAttrs.postInstall or "") + ''
