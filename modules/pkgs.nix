@@ -59,7 +59,6 @@ in
     nh
     openjdk
     jdk25
-    prismlauncher
     sddm-astronaut
     kdePackages.qtmultimedia
     kdePackages.sddm-kcm
@@ -83,6 +82,7 @@ in
     notesnook
     chromium
     szyszka
+    prismlauncher
   ] ++ (with pkgs-unstable; [
     (superfile.overrideAttrs (oldAttrs: {
       postInstall = (oldAttrs.postInstall or "") + ''
