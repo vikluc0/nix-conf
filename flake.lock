@@ -63,11 +63,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1788971242,
-        "narHash": "sha256-XGWQ4CtmuRH+4NijKC5OlMMd32Au7plsIaiaCWuM4to=",
+        "lastModified": 1794094341,
+        "narHash": "sha256-mZayBFqS/teJY/6qezBwSa+MqzLd8es97r3RfvRUioI=",
         "owner": "pfassina",
         "repo": "lazyvim-nix",
-        "rev": "21893371738a6734c2a8ca455d92d57cc8accf83",
+        "rev": "30f8896fa0728844905a2e34f55d93fa42e69bf9",
         "type": "github"
       },
       "original": {
@@ -130,11 +130,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1793726008,
-        "narHash": "sha256-jQp1wKvbwWdLBASTXkSi/VYmDJ5AbBi1WvcMt9HWJC8=",
+        "lastModified": 1794042290,
+        "narHash": "sha256-ziZn2PvCJE5JEEpqTdxXwJpPB+L3YqoCpTAMCzyaP3U=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1d060086d60cb76a40cf37109f979d88a5bd6396",
+        "rev": "f4a03c008967841f2a0b3cb7c436fc6fc31671f6",
         "type": "github"
       },
       "original": {
@@ -239,11 +239,11 @@
         "ski": "ski"
       },
       "locked": {
-        "lastModified": 1793989077,
-        "narHash": "sha256-1Jm9qPZFUFGY5kCBr1PBjzd3nONVyWqElGNW9gnYrm8=",
+        "lastModified": 1794180595,
+        "narHash": "sha256-C9vQrrE3NyVMZvYZUBVWHPVLrHel/kaScCJDyz0pqkU=",
         "owner": "ilyamiro",
         "repo": "serpantinum",
-        "rev": "89a31cae7b0608235704090b47430e5b7cab2fd4",
+        "rev": "7bdd82d277e2407e15adf30eaec01298c9f3d625",
         "type": "github"
       },
       "original": {
