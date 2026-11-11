@@ -40,6 +40,7 @@
     "fastfetch".source = ./dotfiles/fastfetch;
     "hypr".source = ./dotfiles/hypr;
     "superfile".source = ./dotfiles/superfile;
+    "btop".source = ./dotfiles/btop;
   };
 
   home.activation.removeOldHmBackups =
