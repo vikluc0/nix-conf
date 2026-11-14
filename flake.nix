@@ -65,7 +65,6 @@
               imports = [
 	            ./home.nix
 		          plasma-manager.homeModules.plasma-manager
-              lazyvim.homeManagerModules.default
 	            ];
             };
             backupFileExtension = "hm-backup";

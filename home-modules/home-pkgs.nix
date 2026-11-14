@@ -14,6 +14,13 @@
       extraPackages = with pkgs; [
         lua5_1
         luarocks
+        gcc
+        tree-sitter
+        fd
+        lazygit
+        ghostscript
+        tectonic
+        sqlite
       ];
     };
     serpantinum = {
@@ -96,7 +103,7 @@
     };
 
   };
-  
+
   home.packages = with pkgs; [
     kdePackages.kate
     kdePackages.spectacle
