@@ -17,7 +17,10 @@
       url = "github:nimrodium/nixos-splash-plasma6";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lazyvim.url = "github:pfassina/lazyvim-nix";
+    lazyvim = {
+      url = "github:pfassina/lazyvim-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     serpantinum.url = "github:ilyamiro/serpantinum";
     nordvpn = {
       url = "git+https://codeberg.org/marcodemayda/nordvpn-nix";
