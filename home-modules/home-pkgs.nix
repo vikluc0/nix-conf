@@ -9,7 +9,13 @@
   programs = {
     fzf.enable = true;
     zoxide.enable = true;
-    lazyvim.enable = true;
+    lazyvim = {
+      enable = true;
+      extraPackages = with pkgs; [
+        lua5_1
+        luarocks
+      ];
+    };
     serpantinum = {
       enable = true;
       systemd.enable = false;
