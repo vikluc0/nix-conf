@@ -1,6 +1,4 @@
-{ pkgs, nordvpn, ... }:
-
-{
+{pkgs, ...}: {
   hardware = {
     bluetooth = {
       enable = true;
@@ -19,14 +17,14 @@
     };
   };
 
-  services = { 
+  services = {
     xserver = {
       enable = true;
       autoRepeatDelay = 200;
       autoRepeatInterval = 35;
       xkb = {
         layout = "us";
-	      variant = "";
+        variant = "";
       };
     };
 
@@ -37,24 +35,24 @@
         wayland.enable = true;
         extraPackages = with pkgs; [
           sddm-astronaut
-        	kdePackages.qtmultimedia
-        	kdePackages.qtsvg
-        	kdePackages.ksvg
+          kdePackages.qtmultimedia
+          kdePackages.qtsvg
+          kdePackages.ksvg
         ];
         theme = "sddm-astronaut-theme";
         settings = {
-          X11= {
+          X11 = {
             XkbLayout = "us";
-  	      };
+          };
         };
       };
     };
 
     gvfs.enable = true;
-    udisks2.enable = true;  
+    udisks2.enable = true;
     printing = {
       enable = true;
-      drivers = [ pkgs.hplip ]; 
+      drivers = [pkgs.hplip];
     };
     blueman.enable = true;
 
@@ -62,31 +60,35 @@
       enable = true;
       alsa.enable = true;
       pulse.enable = true;
-      alsa.support32Bit = true; 
+      alsa.support32Bit = true;
       jack.enable = true;
     };
-    flatpak = { 
+    flatpak = {
       enable = true;
-      remotes = [ 
+      remotes = [
         {
           name = "flathub";
-	  location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+          location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
         }
       ];
-      uninstallUnmanaged = true; 
+      uninstallUnmanaged = true;
     };
-    openssh = { 
+    openssh = {
       enable = true;
       settings = {
         PasswordAuthentication = true;
         PermitRootLogin = "no";
       };
     };
-    hardware.openrgb.enable = true;
+    hardware.openrgb = {
+      enable = true;
+      motherboard = "amd";
+      startupProfile = "/home/vikluc0/.config/Openrgb/defaut.orp";
+    };
     tailscale.enable = true;
     gnome.gnome-keyring.enable = true;
     nordvpn = {
-      users = [ "vikluc0" ];
+      users = ["vikluc0"];
       enable = true;
       enableGui = true;
     };
@@ -96,11 +98,9 @@
     networkmanager.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 
-         
+      allowedTCPPorts = [
       ];
-      allowedUDPPorts = [ 
-         
+      allowedUDPPorts = [
       ];
     };
   };
@@ -108,7 +108,6 @@
   security = {
     polkit.enable = true;
     rtkit.enable = true;
-    pam.services.gnome-keyring.enable = true ;
+    pam.services.gnome-keyring.enable = true;
   };
-
 }
