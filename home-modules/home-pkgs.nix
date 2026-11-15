@@ -5,7 +5,7 @@
 }: {
   imports = [
     serpantinum.homeManagerModules.default
-    ./nivm.nix
+    ./nvim/nvim.nix
     ./zsh.nix
   ];
 
