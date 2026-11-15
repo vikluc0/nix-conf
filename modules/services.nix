@@ -82,6 +82,7 @@
     };
     hardware.openrgb = {
       enable = true;
+      server.port = 6742;
       motherboard = "amd";
       startupProfile = "/home/vikluc0/.config/Openrgb/defaut.orp";
     };
