@@ -1,11 +1,8 @@
-{ config, lib, pkgs, ...}:
-
-{
+{lib, ...}: {
   xdg.autostart = {
     enable = lib.mkDefault true;
 
     entries = [
-      
     ];
   };
 }

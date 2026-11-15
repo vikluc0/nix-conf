@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   programs.plasma = {
     powerdevil = {
       AC = {

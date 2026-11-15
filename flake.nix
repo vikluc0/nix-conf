@@ -5,8 +5,8 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     home-manager = {
-        url = "github:nix-community/home-manager/release-26.05";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
@@ -26,7 +26,6 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
     nixpkgs-unstable,
     home-manager,
@@ -60,23 +59,23 @@
             useUserPackages = true;
             users.vikluc0 = {
               imports = [
-	            ./home.nix
-		          plasma-manager.homeModules.plasma-manager
-              nvf.homeModules.default
-	            ];
+                ./home.nix
+                plasma-manager.homeModules.plasma-manager
+                nvf.homeModules.default
+              ];
             };
             backupFileExtension = "hm-backup";
-            extraSpecialArgs = { 
+            extraSpecialArgs = {
               inherit nixos-splash-plasma6;
               inherit serpantinum;
-    	        pkgs-unstable = import nixpkgs-unstable {
+              pkgs-unstable = import nixpkgs-unstable {
                 system = "x86_64-linux";
                 config.allowUnfree = true;
-	            };
+              };
             };
           };
-        }		
+        }
       ];
     };
-  };	
+  };
 }

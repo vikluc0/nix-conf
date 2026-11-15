@@ -1,7 +1,9 @@
-{ pkgs, pkgs-unstable, serpantinum, ... }:
-
 {
-  imports = [ 
+  pkgs,
+  serpantinum,
+  ...
+}: {
+  imports = [
     serpantinum.homeManagerModules.default
     ./nivm.nix
     ./zsh.nix
@@ -39,7 +41,5 @@
     kdePackages.breeze
     kdePackages.breeze-icons
     kdePackages.breeze-gtk
-  ] ++ (with pkgs-unstable; [
-    
-  ]);
+  ];
 }

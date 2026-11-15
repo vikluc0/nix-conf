@@ -1,7 +1,4 @@
-{ config, pkgs,... }:
-
-{
-  
+{...}: {
   imports = [
     ./plasma-short.nix
     ./plasma-looks.nix

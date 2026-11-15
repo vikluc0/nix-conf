@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{...}: {
   programs.plasma.dataFile = {
     "kate/anonymous.katesession" = {
       "Kate Plugins" = {
@@ -39,7 +37,7 @@
         templateplugin = false;
         textfilterplugin = true;
       };
-  
+
       MainWindow0 = {
         "Active ViewSpace" = 0;
         Kate-MDI-H-Splitter = "0,915,0";
@@ -61,64 +59,64 @@
         Kate-MDI-Sidebar-3-Splitter = 960;
         Kate-MDI-Sidebar-Style = 2;
         Kate-MDI-Sidebar-Visible = true;
-  
+
         Kate-MDI-ToolView-diagnostics-Position = 3;
         Kate-MDI-ToolView-diagnostics-Show-Button-In-Sidebar = true;
         Kate-MDI-ToolView-diagnostics-Visible = false;
-  
+
         Kate-MDI-ToolView-kate_plugin_katesearch-Position = 3;
         Kate-MDI-ToolView-kate_plugin_katesearch-Show-Button-In-Sidebar = true;
         Kate-MDI-ToolView-kate_plugin_katesearch-Visible = false;
-  
+
         Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Position = 0;
         Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Show-Button-In-Sidebar = true;
         Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Visible = false;
-  
+
         Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Position = 3;
         Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Show-Button-In-Sidebar = true;
         Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Visible = false;
-  
+
         Kate-MDI-ToolView-kateproject-Position = 0;
         Kate-MDI-ToolView-kateproject-Show-Button-In-Sidebar = true;
         Kate-MDI-ToolView-kateproject-Visible = false;
-  
+
         Kate-MDI-ToolView-kateprojectgit-Position = 0;
         Kate-MDI-ToolView-kateprojectgit-Show-Button-In-Sidebar = true;
         Kate-MDI-ToolView-kateprojectgit-Visible = false;
-  
+
         Kate-MDI-ToolView-kateprojectinfo-Position = 3;
         Kate-MDI-ToolView-kateprojectinfo-Show-Button-In-Sidebar = true;
         Kate-MDI-ToolView-kateprojectinfo-Visible = false;
-  
+
         Kate-MDI-ToolView-lspclient_symbol_outline-Position = 0;
         Kate-MDI-ToolView-lspclient_symbol_outline-Show-Button-In-Sidebar = true;
         Kate-MDI-ToolView-lspclient_symbol_outline-Visible = false;
-  
+
         Kate-MDI-ToolView-output-Position = 3;
         Kate-MDI-ToolView-output-Show-Button-In-Sidebar = true;
         Kate-MDI-ToolView-output-Visible = false;
-  
+
         Kate-MDI-V-Splitter = "0,403,0";
       };
-  
+
       "MainWindow0 Settings".WindowState = 8;
-  
+
       "MainWindow0-Splitter 0" = {
         Children = "MainWindow0-ViewSpace 0";
         Orientation = 1;
         Sizes = 915;
       };
-  
+
       "MainWindow0-ViewSpace 0" = {
         Count = 0;
         Documents = "";
       };
-  
+
       "Open Documents".Count = 0;
       "Open MainWindows".Count = 1;
-  
+
       "Plugin:kateprojectplugin:".projects = "";
-  
+
       "Plugin:katesearchplugin:MainWindow:0" = {
         BinaryFiles = false;
         CurrentExcludeFilter = "-1";

@@ -1,7 +1,5 @@
-{ ... }:
-
-{
-  networking.hostName = "VirusPC"; 
+{...}: {
+  networking.hostName = "VirusPC";
 
   time.timeZone = "America/Lower_Princes";
 

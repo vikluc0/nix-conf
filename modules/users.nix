@@ -1,18 +1,13 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   users.users.vikluc0 = {
     isNormalUser = true;
     description = "vikluc0";
     shell = pkgs.zsh;
-    extraGroups = [ 
+    extraGroups = [
       "networkmanager"
       "wheel"
       "dialout"
       "nordvpn"
-    ];
-    packages = with pkgs; [
-      
     ];
   };
 }
