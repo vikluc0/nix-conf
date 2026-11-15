@@ -84,7 +84,7 @@
       enable = true;
       server.port = 6742;
       motherboard = "amd";
-      startupProfile = "/home/vikluc0/.config/Openrgb/defaut.orp";
+      startupProfile = "defaut.orp";
     };
     tailscale.enable = true;
     gnome.gnome-keyring.enable = true;
@@ -94,6 +94,8 @@
       enableGui = true;
     };
   };
+
+  hardware.i2c.enable = true;
 
   networking = {
     networkmanager.enable = true;

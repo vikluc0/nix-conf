@@ -20,5 +20,6 @@
       "nvidia_drm"
     ];
     kernelParams = ["nvidia-drm.fbdev=1"];
+    kernelModules = ["i2c-dev" "i2c-piix4"];
   };
 }
