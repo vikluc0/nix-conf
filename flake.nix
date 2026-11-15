@@ -17,10 +17,7 @@
       url = "github:nimrodium/nixos-splash-plasma6";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lazyvim = {
-      url = "github:pfassina/lazyvim-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nvf.url = "github:NotAShelf/nvf";
     serpantinum.url = "github:ilyamiro/serpantinum";
     nordvpn = {
       url = "git+https://codeberg.org/marcodemayda/nordvpn-nix";
@@ -34,11 +31,11 @@
     nixpkgs-unstable,
     home-manager,
     plasma-manager,
-    lazyvim,
     nix-flatpak,
     nixos-splash-plasma6,
     serpantinum,
     nordvpn,
+    nvf,
     ...
   }: {
     nixosConfigurations.VirusPC = nixpkgs.lib.nixosSystem {
@@ -65,12 +62,12 @@
               imports = [
 	            ./home.nix
 		          plasma-manager.homeModules.plasma-manager
+              nvf.homeModules.default
 	            ];
             };
             backupFileExtension = "hm-backup";
             extraSpecialArgs = { 
-              inherit lazyvim;
-	            inherit nixos-splash-plasma6;
+              inherit nixos-splash-plasma6;
               inherit serpantinum;
     	        pkgs-unstable = import nixpkgs-unstable {
                 system = "x86_64-linux";
