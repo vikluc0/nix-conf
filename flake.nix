@@ -23,6 +23,7 @@
       url = "git+https://codeberg.org/marcodemayda/nordvpn-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    bedrock-on-linux.url = "github:Wyze3306/BedrockOnLinux";
   };
 
   outputs = {
@@ -35,6 +36,7 @@
     serpantinum,
     nordvpn,
     nvf,
+    bedrock-on-linux,
     ...
   }: {
     nixosConfigurations.VirusPC = nixpkgs.lib.nixosSystem {
@@ -42,6 +44,7 @@
       specialArgs = {
         inherit nixos-splash-plasma6;
         inherit serpantinum;
+        inherit bedrock-on-linux;
         pkgs-unstable = import nixpkgs-unstable {
           system = "x86_64-linux";
           config.allowUnfree = true;

@@ -2,6 +2,7 @@
   pkgs,
   pkgs-unstable,
   nixos-splash-plasma6,
+  bedrock-on-linux,
   ...
 }: let
   sddmWallpaperName = "mountain.png";
@@ -87,6 +88,7 @@ in {
       chromium
       szyszka
       prismlauncher
+      bedrock-on-linux.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]
     ++ (with pkgs-unstable; [
       (superfile.overrideAttrs (oldAttrs: {
