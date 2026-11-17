@@ -35,7 +35,7 @@
   };
 
   home.packages = with pkgs; [
-    kdePackages.kate
+    kdePackages.okular
     kdePackages.spectacle
     kdePackages.gwenview
     kdePackages.breeze

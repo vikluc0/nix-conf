@@ -18,6 +18,7 @@ audio_player = 'vlc'
 image_viewer = 'gwenview'
 archive_manager = 'peazip'
 dir_editor = "nvim"
+pdf_viewer = "okular"
 
 #-- Auto check for update
 auto_check_update = true
