@@ -38,8 +38,6 @@
     kdePackages.okular
     kdePackages.spectacle
     kdePackages.gwenview
-    kdePackages.breeze
-    kdePackages.breeze-icons
-    kdePackages.breeze-gtk
+    kdePackages.kdenlive
   ];
 }

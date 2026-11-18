@@ -72,7 +72,6 @@ in {
       waydroid
       wineWow64Packages.stable
       winetricks
-      kdePackages.kdenlive
       ckan
       openrgb
       obs-studio
@@ -89,6 +88,9 @@ in {
       szyszka
       prismlauncher
       bedrock-on-linux.packages.${pkgs.stdenv.hostPlatform.system}.default
+      kdePackages.breeze
+      kdePackages.breeze-icons
+      kdePackages.breeze-gtk
     ]
     ++ (with pkgs-unstable; [
       (superfile.overrideAttrs (oldAttrs: {
