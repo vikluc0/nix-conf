@@ -1,10 +1,4 @@
-{
-  pkgs,
-  pkgs-unstable,
-  serpantinum,
-  bedrock-on-linux,
-  ...
-}: {
+{serpantinum, ...}: {
   imports = [
     serpantinum.homeManagerModules.default
     ./nvim/nvim.nix
@@ -13,6 +7,38 @@
 
   programs = {
     firefox.enable = true;
+    kitty = {
+      enable = true;
+
+      font = {
+        name = "JetBrainsMono Nerd Font";
+        size = 11.0;
+      };
+
+      settings = {
+        cursor_shape = "beam";
+        cursor_trail = 1;
+        window_margin_width = "21.75";
+        remember_window_size = "no";
+        confirm_os_window_close = 0;
+        background_opacity = "0.6";
+      };
+
+      extraConfig = ''
+        # Scroll & Zoom
+        map page_up scroll_page_up
+        map page_down scroll_page_down
+
+        map ctrl+plus change_font_size all +1
+        map ctrl+equal change_font_size all +1
+        map ctrl+kp_add change_font_size all +1
+        map ctrl+minus change_font_size all -1
+        map ctrl+underscore change_font_size all -1
+        map ctrl+kp_subtract change_font_size all -1
+        map ctrl+0 change_font_size all 0
+        map ctrl+kp_0 change_font_size all 0
+      '';
+    };
     fzf.enable = true;
     zoxide.enable = true;
     serpantinum = {
@@ -36,80 +62,4 @@
     ## git commit -m "change"
     ## git push origin main
   };
-
-  home.packages = with pkgs;
-    [
-      neovim
-      wget
-      kitty
-      bat
-      eza
-      fastfetch
-      mangohud
-      vlc
-      yt-dlp
-      peazip
-      whatsie
-      libreoffice
-      localsend
-      ripgrep
-      discord
-      wl-clipboard
-      jdk25
-      wineWow64Packages.stable
-      winetricks
-      ckan
-      openrgb
-      obs-studio
-      btop
-      quickshell
-      spotify
-      lavat
-      ffmpeg
-      plasticity
-      notesnook
-      chromium
-      szyszka
-      prismlauncher
-      bedrock-on-linux.packages.${pkgs.stdenv.hostPlatform.system}.default
-
-      kdePackages.okular
-      kdePackages.spectacle
-      kdePackages.gwenview
-      kdePackages.kdenlive
-    ]
-    ++ (with pkgs-unstable; [
-      (superfile.overrideAttrs (oldAttrs: {
-        postInstall =
-          (oldAttrs.postInstall or "")
-          + ''
-            mv $out/bin/superfile $out/bin/spf
-          '';
-
-        meta =
-          oldAttrs.meta
-          // {
-            mainProgram = "spf";
-          };
-      }))
-      (pkgs.symlinkJoin {
-        name = "orca-slicer";
-        paths = [pkgs-unstable.orca-slicer];
-        buildInputs = [pkgs.makeWrapper];
-
-        postBuild = ''
-          wrapProgram $out/bin/orca-slicer \
-            --set WEBKIT_DISABLE_DMABUF_RENDERER 1 \
-            --set GDK_BACKEND x11 \
-            --set GTK_THEME Adwaita:dark \
-        '';
-      })
-      motrix
-      croc
-    ]);
-
-  services.flatpak.packages = [
-    "org.vinegarhq.Sober"
-    "org.gnome.Platform//51"
-  ];
 }

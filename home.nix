@@ -36,8 +36,7 @@
   };
 
   xdg.configFile = {
-    "kitty".source = ./dotfiles/kitty;
-    "p10k.zsh".source = ./dotfiles/.p10k.zsh;
+    "p10k.zsh".source = ./dotfiles/p10k.zsh;
     "fastfetch".source = ./dotfiles/fastfetch;
     "hypr".source = ./dotfiles/hypr;
     "superfile".source = ./dotfiles/superfile;

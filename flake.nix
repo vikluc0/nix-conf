@@ -44,6 +44,7 @@
       specialArgs = {
         inherit nixos-splash-plasma6;
         inherit serpantinum;
+        inherit bedrock-on-linux;
         pkgs-unstable = import nixpkgs-unstable {
           system = "x86_64-linux";
           config.allowUnfree = true;
@@ -63,7 +64,6 @@
               imports = [
                 ./home.nix
                 plasma-manager.homeModules.plasma-manager
-                nix-flatpak.homeManagerModules.nix-flatpak
                 nvf.homeModules.default
               ];
             };
@@ -71,7 +71,6 @@
             extraSpecialArgs = {
               inherit nixos-splash-plasma6;
               inherit serpantinum;
-              inherit bedrock-on-linux;
               pkgs-unstable = import nixpkgs-unstable {
                 system = "x86_64-linux";
                 config.allowUnfree = true;

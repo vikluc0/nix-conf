@@ -1,4 +1,4 @@
-{pkgs, ... }: {
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -13,19 +13,17 @@
     };
 
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#VirusPC";
-      update = "sudo nix flake update --flake /etc/nixos/ && sudo nixos-rebuild switch --flake /etc/nixos/#VirusPC && flatpak update";
+      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#VirusLaptop";
+      update = "sudo nix flake update --flake /etc/nixos/ && sudo nixos-rebuild switch --flake /etc/nixos/#VirusLaptop && flatpak update";
       bios-update = "sudo fwupdmgr refresh && sudo fwupdmgr update";
       nix-clean = "nh clean all --keep 5";
       ls = "ls --color=auto";
       eza = "eza --color=auto -a --icons=always --group-directories-first";
       ezal = "eza --color=auto -lah --icons=always --git";
       ezat = "eza --color=auto --tree --level=2 --icons=always";
-      btop = "LD_LIBRARY_PATH=/run/opengl-driver/lib btop";
     };
 
     initContent = ''
-
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
 
       if command -v fastfetch &>/dev/null; then
@@ -38,7 +36,7 @@
 
       [[ ! -f ~/.config/p10k.zsh ]] || source ~/.config/p10k.zsh
 
-    # Yazi function wrapper cleanly isolated from Nix interpolation variables
+      # Yazi function wrapper cleanly isolated from Nix interpolation variables
       y() {
           local tmp
           tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
@@ -53,7 +51,7 @@
     oh-my-zsh = {
       enable = true;
       #theme = "powerlevel10k/powerlevel10k";
-      plugins = [ "git" ];
+      plugins = ["git"];
     };
   };
 }
