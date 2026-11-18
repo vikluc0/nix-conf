@@ -2,8 +2,9 @@
   imports = [
     serpantinum.homeManagerModules.default
     ./kitty.nix
-    ./nvim/nvim.nix
     ./zsh.nix
+    ./nvim/nvim.nix
+    ./btop.nix
   ];
 
   programs = {
