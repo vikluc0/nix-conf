@@ -1,8 +1,6 @@
 {
   pkgs,
-  pkgs-unstable,
   nixos-splash-plasma6,
-  bedrock-on-linux,
   ...
 }: let
   sddmWallpaperName = "mountain.png";
@@ -27,12 +25,10 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   programs = {
-    firefox.enable = true;
     steam.enable = true;
     steam.gamescopeSession.enable = true;
     gamemode.enable = true;
     zsh.enable = true;
-    localsend.enable = true;
     hyprland = {
       enable = true;
       xwayland.enable = true;
@@ -40,93 +36,20 @@ in {
   };
 
   # You can use https://search.nixos.org/ to find more packages (and options).
-  environment.systemPackages = with pkgs;
-    [
-      neovim
-      wget
-      kitty
-      bat
-      eza
-      fastfetch
-      mangohud
-      vlc
-      yt-dlp
-      peazip
-      whatsie
-      libreoffice
-      tailscale
-      gparted
-      ripgrep
-      discord
-      wl-clipboard
-      nh
-      openjdk
-      jdk25
-      sddm-astronaut
-      hplip
-      nixos-splash-plasma6.packages.${pkgs.stdenv.hostPlatform.system}.default
-      waydroid
-      wineWow64Packages.stable
-      winetricks
-      ckan
-      openrgb
-      obs-studio
-      btop
-      git
-      gnome-keyring
-      quickshell
-      spotify
-      lavat
-      ffmpeg
-      plasticity
-      notesnook
-      chromium
-      szyszka
-      prismlauncher
-      bedrock-on-linux.packages.${pkgs.stdenv.hostPlatform.system}.default
-
-      kdePackages.okular
-      kdePackages.spectacle
-      kdePackages.gwenview
-      kdePackages.kdenlive
-      kdePackages.breeze
-      kdePackages.breeze-icons
-      kdePackages.breeze-gtk
-      kdePackages.qtmultimedia
-      kdePackages.sddm-kcm
-    ]
-    ++ (with pkgs-unstable; [
-      (superfile.overrideAttrs (oldAttrs: {
-        postInstall =
-          (oldAttrs.postInstall or "")
-          + ''
-            mv $out/bin/superfile $out/bin/spf
-          '';
-
-        meta =
-          oldAttrs.meta
-          // {
-            mainProgram = "spf";
-          };
-      }))
-      (pkgs.symlinkJoin {
-        name = "orca-slicer";
-        paths = [pkgs-unstable.orca-slicer];
-        buildInputs = [pkgs.makeWrapper];
-
-        postBuild = ''
-          wrapProgram $out/bin/orca-slicer \
-            --set WEBKIT_DISABLE_DMABUF_RENDERER 1 \
-            --set GDK_BACKEND x11\
-            --set GTK_THEME Adwaita:dark \
-        '';
-      })
-      motrix
-      croc
-    ]);
-
-  services.flatpak.packages = [
-    "org.vinegarhq.Sober"
+  environment.systemPackages = with pkgs; [
+    tailscale
+    gparted
+    nh
+    sddm-astronaut
+    hplip
+    nixos-splash-plasma6.packages.${pkgs.stdenv.hostPlatform.system}.default
+    gnome-keyring
+    waydroid
+    kdePackages.breeze
+    kdePackages.breeze-icons
+    kdePackages.breeze-gtk
+    kdePackages.qtmultimedia
+    kdePackages.sddm-kcm
   ];
 
   fonts.packages = with pkgs; [
