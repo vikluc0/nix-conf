@@ -47,9 +47,7 @@ in {
       kitty
       bat
       eza
-      zoxide
       fastfetch
-      fzf
       mangohud
       vlc
       yt-dlp
@@ -65,8 +63,6 @@ in {
       openjdk
       jdk25
       sddm-astronaut
-      kdePackages.qtmultimedia
-      kdePackages.sddm-kcm
       hplip
       nixos-splash-plasma6.packages.${pkgs.stdenv.hostPlatform.system}.default
       waydroid
@@ -88,9 +84,16 @@ in {
       szyszka
       prismlauncher
       bedrock-on-linux.packages.${pkgs.stdenv.hostPlatform.system}.default
+
+      kdePackages.okular
+      kdePackages.spectacle
+      kdePackages.gwenview
+      kdePackages.kdenlive
       kdePackages.breeze
       kdePackages.breeze-icons
       kdePackages.breeze-gtk
+      kdePackages.qtmultimedia
+      kdePackages.sddm-kcm
     ]
     ++ (with pkgs-unstable; [
       (superfile.overrideAttrs (oldAttrs: {

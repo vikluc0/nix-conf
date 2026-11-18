@@ -1,8 +1,4 @@
-{
-  pkgs,
-  serpantinum,
-  ...
-}: {
+{serpantinum, ...}: {
   imports = [
     serpantinum.homeManagerModules.default
     ./nvim/nvim.nix
@@ -33,11 +29,4 @@
     ## git commit -m "change"
     ## git push origin main
   };
-
-  home.packages = with pkgs; [
-    kdePackages.okular
-    kdePackages.spectacle
-    kdePackages.gwenview
-    kdePackages.kdenlive
-  ];
 }
