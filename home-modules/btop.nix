@@ -18,7 +18,7 @@
       graph_symbol = "braille";
 
       shown_boxes = "cpu mem net proc gpu0";
-      update_ms = 1000;
+      update_ms = 100;
 
       proc_sorting = "pid";
       proc_reversed = false;
