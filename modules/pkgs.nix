@@ -80,6 +80,7 @@ in {
       szyszka
       prismlauncher
       bedrock-on-linux.packages.${pkgs.stdenv.hostPlatform.system}.default
+      thunderbird
 
       kdePackages.okular
       kdePackages.spectacle
